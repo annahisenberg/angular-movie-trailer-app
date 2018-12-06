@@ -1,0 +1,8 @@
+<button (click)="onDiscoverMoviesInTheaters()" class="btn btn-primary">Discover movies in theaters</button>
+
+<div *ngIf="data">
+    <div *ngFor="let d of data">
+        <p>Title: {{d.title}}</p>
+        <p>Overview: {{d.overview}}</p>
+    </div>
+</div>

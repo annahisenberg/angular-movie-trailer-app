@@ -1,0 +1,20 @@
+<form (submit)="onSearch()">
+    <div class="form-group">
+        <label>Search for a movie or TV show:</label>
+        <input type="text" class="form-control" [(ngModel)]="name" name="name" required>
+        <button class="btn btn-primary">Search</button>
+    </div>
+</form>
+<div *ngIf="movieData">
+    <p>Title: {{movieData.Title}}</p>
+    <img [src]="movieData.Poster" />
+    <p>Genre: {{movieData.Genre}}</p>
+    <p>Plot: {{movieData.Plot}}</p>
+    <p>Actors: {{movieData.Actors}}</p>
+    <p>Director:{{movieData.Director}}</p>
+    <p>Awards: {{movieData.Awards}}</p>
+    <button (click)="onClickSearchYoutube()">Watch trailer</button>
+</div>
+<div *ngIf="youtubeDataId">
+    <iframe id="ytplayer" type="text/html" width="640" height="360" [src]='youtubeURL | safe'></iframe>
+</div>
