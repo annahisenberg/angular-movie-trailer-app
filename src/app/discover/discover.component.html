@@ -4,5 +4,10 @@
     <div *ngFor="let d of data">
         <p>Title: {{d.title}}</p>
         <p>Overview: {{d.overview}}</p>
+        <button (click)='searchYoutube(d.title)'>Watch Trailer</button>
     </div>
+</div>
+<div class="col-md-4" *ngIf="youtubeDataId">
+    <h2>Heading</h2>
+    <iframe id="ytplayer" type="text/html" width="640" height="360" [src]='youtubeURL | safe'></iframe>
 </div>

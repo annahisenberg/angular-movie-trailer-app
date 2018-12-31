@@ -14,11 +14,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { DiscoverComponent } from './discover/discover.component';
 import { SafePipe } from './safe.pipe';
+import { JumbotronComponent } from './jumbotron/jumbotron.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '', component: SearchComponent },
   { path: 'about', component: AboutComponent },
   { path: 'discover', component: DiscoverComponent },
+  { path: 'contact', component: ContactComponent },
   { path: '', component: SearchComponent, pathMatch: 'full' }
 ];
 
@@ -31,7 +34,9 @@ const appRoutes: Routes = [
     NavbarComponent,
     AboutComponent,
     DiscoverComponent,
-    SafePipe
+    SafePipe,
+    JumbotronComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -17,7 +17,6 @@ export class SearchComponent implements OnInit {
 
   onSearch() {
     this.service.getMovies(this.name).subscribe((resp: any) => {
-      console.log(resp);
       this.movieData = resp;
     });
   }
@@ -26,7 +25,6 @@ export class SearchComponent implements OnInit {
     this.youtubeService.getYoutubeResults(this.name).subscribe((resp: any) => {
       this.youtubeDataId = resp.items[0].id.videoId;
       this.youtubeURL = `https://www.youtube.com/embed/${this.youtubeDataId}`;
-      console.log(this.youtubeURL);
     });
   }
 
